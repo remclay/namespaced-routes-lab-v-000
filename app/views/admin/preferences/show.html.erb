@@ -1,0 +1,7 @@
+<%= render partial: 'display_preference', locals: {preference: @preference} %>
+
+<%= link_to "Edit Preference", edit_admin_preference_path(@preference) %><br><br>
+
+<%= form_for [:admin, @preference], :url => admin_preference_path, :method => :delete do |f| %>
+  <%= f.submit "Delete Preference" %>
+<% end %>
